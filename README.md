@@ -20,8 +20,7 @@ later rather than being baked in as hardcoded Turkish.
 pipeline, a first slice of the component library, and a live, working Home
 dashboard are built and verified — not wireframed. Everything past that
 (Orders, Production, Inventory, Finance, CRM screens; the Angular mirror;
-Storybook; e2e coverage) is not started yet. See [`docs/reference/`](docs/reference)
-for the original visual reference this was built against.
+Storybook; e2e coverage) is not started yet.
 
 ## What it looks like
 
