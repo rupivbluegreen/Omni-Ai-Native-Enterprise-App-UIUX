@@ -11,7 +11,7 @@ export interface DataTableColumn<Row> {
 export interface DataTableProps<Row> {
   caption: string;
   columns: Array<DataTableColumn<Row>>;
-  rows: Row[];
+  rows: readonly Row[];
   rowKey: (row: Row) => string;
 }
 
