@@ -1,0 +1,27 @@
+.omni-kpi-card { display: grid; gap: var(--omni-space-1); }
+
+.omni-kpi-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: var(--omni-radius-sm);
+  margin-block-end: var(--omni-space-0-5);
+}
+.omni-kpi-icon svg { inline-size: 20px; block-size: 20px; }
+.omni-kpi-icon--brand { background: var(--omni-color-brand-100); color: var(--omni-color-brand-700); }
+.omni-kpi-icon--blue { background: var(--omni-color-blue-100); color: var(--omni-color-status-info); }
+.omni-kpi-icon--orange { background: var(--omni-color-orange-100); color: var(--omni-color-status-warning); }
+.omni-kpi-icon--red { background: var(--omni-color-red-100); color: var(--omni-color-status-danger); }
+
+.omni-kpi-label { font-size: var(--omni-typography-size-body-sm); color: var(--omni-color-text-secondary); font-weight: var(--omni-typography-weight-medium); }
+.omni-kpi-value {
+  font-family: var(--omni-typography-font-body);
+  font-size: var(--omni-typography-size-heading-xl);
+  font-weight: var(--omni-typography-weight-bold);
+  color: var(--omni-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.omni-kpi-meta { display: flex; align-items: center; gap: var(--omni-space-1); flex-wrap: wrap; }
+.omni-kpi-note { font-size: var(--omni-typography-size-caption); color: var(--omni-color-text-tertiary); }

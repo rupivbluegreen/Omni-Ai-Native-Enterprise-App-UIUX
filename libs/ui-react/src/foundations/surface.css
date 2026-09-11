@@ -1,0 +1,9 @@
+.omni-card {
+  background: var(--omni-color-surface-card);
+  border: var(--omni-border-width-hairline) solid var(--omni-color-border-subtle);
+  border-radius: var(--omni-radius-lg);
+  box-shadow: var(--omni-shadow-card);
+}
+.omni-card--sm { padding: var(--omni-space-2); }
+.omni-card--md { padding: var(--omni-space-3); }
+.omni-card--lg { padding: var(--omni-space-4); }

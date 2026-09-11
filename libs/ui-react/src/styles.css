@@ -1,0 +1,15 @@
+@import '@omniappsuiux/design-tokens/tokens.css';
+@import './foundations/surface.css';
+@import './foundations/button.css';
+@import './foundations/status-badge.css';
+@import './patterns/kpi-card.css';
+@import './patterns/ai-insight-card.css';
+@import './patterns/app-shell.css';
+
+body {
+  margin: 0;
+  font-family: var(--omni-typography-font-body);
+  background: var(--omni-color-surface-page);
+  color: var(--omni-color-text-primary);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "react-erp",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@omniappsuiux/design-tokens": "workspace:*",
+    "@omniappsuiux/ui-react": "workspace:*",
+    "date-fns": "^4.4.0",
+    "echarts": "^6.1.0",
+    "echarts-for-react": "^3.0.6",
+    "lucide-react": "^1.43.0"
+  }
+}
