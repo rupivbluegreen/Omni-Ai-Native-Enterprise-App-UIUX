@@ -91,19 +91,19 @@ export function Dashboard() {
             <OrderDistributionChart />
             <ul className="omni-dashboard-legend">
               <li>
-                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--omni-color-brand-500)' }} />
+                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--tx-color-brand-500)' }} />
                 Export <b>45%</b>
               </li>
               <li>
-                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--omni-color-blue-500)' }} />
+                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--tx-color-blue-500)' }} />
                 Domestic <b>27%</b>
               </li>
               <li>
-                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--omni-color-orange-500)' }} />
+                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--tx-color-orange-500)' }} />
                 Own brand <b>13%</b>
               </li>
               <li>
-                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--omni-color-brand-300)' }} />
+                <span className="omni-dashboard-legend-dot" style={{ background: 'var(--tx-color-brand-300)' }} />
                 Other <b>15%</b>
               </li>
             </ul>

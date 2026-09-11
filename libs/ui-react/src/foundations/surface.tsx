@@ -23,7 +23,7 @@ export function Stack({
   ...rest
 }: HTMLAttributes<HTMLDivElement> & { gap?: '0-5' | '1' | '1-5' | '2' | '3' | '4' }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: `var(--omni-space-${gap})`, ...style }} {...rest}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: `var(--tx-space-${gap})`, ...style }} {...rest}>
       {children}
     </div>
   );
@@ -50,7 +50,7 @@ export function Inline({
         alignItems: align,
         justifyContent: justify,
         flexWrap: wrap ? 'wrap' : 'nowrap',
-        gap: `var(--omni-space-${gap})`,
+        gap: `var(--tx-space-${gap})`,
         ...style,
       }}
       {...rest}

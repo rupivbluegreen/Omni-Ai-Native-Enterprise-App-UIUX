@@ -2,18 +2,18 @@
   display: inline-flex;
   align-items: center;
   height: 24px;
-  padding-inline: var(--omni-space-1-5);
-  border-radius: var(--omni-radius-pill);
-  font-size: var(--omni-typography-size-caption);
-  font-weight: var(--omni-typography-weight-semibold);
+  padding-inline: var(--tx-space-1-5);
+  border-radius: var(--tx-radius-pill);
+  font-size: var(--tx-typography-size-caption);
+  font-weight: var(--tx-typography-weight-semibold);
   white-space: nowrap;
 }
-.omni-status-badge--brand { background: var(--omni-color-brand-100); color: var(--omni-color-brand-700); }
-.omni-status-badge--blue { background: var(--omni-color-blue-100); color: var(--omni-color-status-info); }
-.omni-status-badge--orange { background: var(--omni-color-orange-100); color: var(--omni-color-status-warning); }
-.omni-status-badge--red { background: var(--omni-color-red-100); color: var(--omni-color-status-danger); }
-.omni-status-badge--neutral { background: var(--omni-color-surface-subtle); color: var(--omni-color-text-secondary); }
+.omni-status-badge--brand { background: var(--tx-color-brand-100); color: var(--tx-color-brand-700); }
+.omni-status-badge--blue { background: var(--tx-color-blue-100); color: var(--tx-color-status-info); }
+.omni-status-badge--orange { background: var(--tx-color-orange-100); color: var(--tx-color-status-warning); }
+.omni-status-badge--red { background: var(--tx-color-red-100); color: var(--tx-color-status-danger); }
+.omni-status-badge--neutral { background: var(--tx-color-surface-subtle); color: var(--tx-color-text-secondary); }
 
-.omni-metric-delta { font-size: var(--omni-typography-size-body-sm); font-weight: var(--omni-typography-weight-semibold); font-variant-numeric: tabular-nums; }
-.omni-metric-delta--good { color: var(--omni-color-status-success); }
-.omni-metric-delta--bad { color: var(--omni-color-status-danger); }
+.omni-metric-delta { font-size: var(--tx-typography-size-body-sm); font-weight: var(--tx-typography-weight-semibold); font-variant-numeric: tabular-nums; }
+.omni-metric-delta--good { color: var(--tx-color-status-success); }
+.omni-metric-delta--bad { color: var(--tx-color-status-danger); }

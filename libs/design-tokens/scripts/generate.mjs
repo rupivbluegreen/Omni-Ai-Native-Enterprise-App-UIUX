@@ -30,7 +30,7 @@ const tsConstCss = {};
 const tsConstRaw = {};
 
 walk(tokens, [], (path, value) => {
-  const cssVarName = `--omni-${path.join('-')}`;
+  const cssVarName = `--tx-${path.join('-')}`; // not --omni-: collides with the production app's own tokens at different values
   cssLines.push(`  ${cssVarName}: ${value};`);
   setAtPath(tsConstCss, path, `var(${cssVarName})`);
   setAtPath(tsConstRaw, path, value);

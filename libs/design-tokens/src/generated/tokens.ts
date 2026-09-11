@@ -3,140 +3,140 @@
 export const tokens = {
   "color": {
     "surface": {
-      "page": "var(--omni-color-surface-page)",
-      "card": "var(--omni-color-surface-card)",
-      "elevated": "var(--omni-color-surface-elevated)",
-      "subtle": "var(--omni-color-surface-subtle)"
+      "page": "var(--tx-color-surface-page)",
+      "card": "var(--tx-color-surface-card)",
+      "elevated": "var(--tx-color-surface-elevated)",
+      "subtle": "var(--tx-color-surface-subtle)"
     },
     "text": {
-      "primary": "var(--omni-color-text-primary)",
-      "secondary": "var(--omni-color-text-secondary)",
-      "tertiary": "var(--omni-color-text-tertiary)",
-      "on-brand": "var(--omni-color-text-on-brand)"
+      "primary": "var(--tx-color-text-primary)",
+      "secondary": "var(--tx-color-text-secondary)",
+      "tertiary": "var(--tx-color-text-tertiary)",
+      "on-brand": "var(--tx-color-text-on-brand)"
     },
     "border": {
-      "subtle": "var(--omni-color-border-subtle)",
-      "default": "var(--omni-color-border-default)"
+      "subtle": "var(--tx-color-border-subtle)",
+      "default": "var(--tx-color-border-default)"
     },
     "brand": {
-      "50": "var(--omni-color-brand-50)",
-      "100": "var(--omni-color-brand-100)",
-      "300": "var(--omni-color-brand-300)",
-      "500": "var(--omni-color-brand-500)",
-      "600": "var(--omni-color-brand-600)",
-      "700": "var(--omni-color-brand-700)",
-      "900": "var(--omni-color-brand-900)"
+      "50": "var(--tx-color-brand-50)",
+      "100": "var(--tx-color-brand-100)",
+      "300": "var(--tx-color-brand-300)",
+      "500": "var(--tx-color-brand-500)",
+      "600": "var(--tx-color-brand-600)",
+      "700": "var(--tx-color-brand-700)",
+      "900": "var(--tx-color-brand-900)"
     },
     "blue": {
-      "100": "var(--omni-color-blue-100)",
-      "500": "var(--omni-color-blue-500)"
+      "100": "var(--tx-color-blue-100)",
+      "500": "var(--tx-color-blue-500)"
     },
     "orange": {
-      "100": "var(--omni-color-orange-100)",
-      "500": "var(--omni-color-orange-500)"
+      "100": "var(--tx-color-orange-100)",
+      "500": "var(--tx-color-orange-500)"
     },
     "lilac": {
-      "100": "var(--omni-color-lilac-100)",
-      "500": "var(--omni-color-lilac-500)"
+      "100": "var(--tx-color-lilac-100)",
+      "500": "var(--tx-color-lilac-500)"
     },
     "red": {
-      "100": "var(--omni-color-red-100)",
-      "500": "var(--omni-color-red-500)"
+      "100": "var(--tx-color-red-100)",
+      "500": "var(--tx-color-red-500)"
     },
     "status": {
-      "success": "var(--omni-color-status-success)",
-      "warning": "var(--omni-color-status-warning)",
-      "danger": "var(--omni-color-status-danger)",
-      "info": "var(--omni-color-status-info)"
+      "success": "var(--tx-color-status-success)",
+      "warning": "var(--tx-color-status-warning)",
+      "danger": "var(--tx-color-status-danger)",
+      "info": "var(--tx-color-status-info)"
     },
     "chart": {
-      "1": "var(--omni-color-chart-1)",
-      "2": "var(--omni-color-chart-2)",
-      "3": "var(--omni-color-chart-3)",
-      "4": "var(--omni-color-chart-4)",
-      "5": "var(--omni-color-chart-5)",
-      "6": "var(--omni-color-chart-6)"
+      "1": "var(--tx-color-chart-1)",
+      "2": "var(--tx-color-chart-2)",
+      "3": "var(--tx-color-chart-3)",
+      "4": "var(--tx-color-chart-4)",
+      "5": "var(--tx-color-chart-5)",
+      "6": "var(--tx-color-chart-6)"
     }
   },
   "typography": {
     "font": {
-      "display": "var(--omni-typography-font-display)",
-      "body": "var(--omni-typography-font-body)",
-      "mono": "var(--omni-typography-font-mono)"
+      "display": "var(--tx-typography-font-display)",
+      "body": "var(--tx-typography-font-body)",
+      "mono": "var(--tx-typography-font-mono)"
     },
     "size": {
-      "display-xl": "var(--omni-typography-size-display-xl)",
-      "display-lg": "var(--omni-typography-size-display-lg)",
-      "heading-xl": "var(--omni-typography-size-heading-xl)",
-      "heading-lg": "var(--omni-typography-size-heading-lg)",
-      "heading-md": "var(--omni-typography-size-heading-md)",
-      "body-lg": "var(--omni-typography-size-body-lg)",
-      "body-md": "var(--omni-typography-size-body-md)",
-      "body-sm": "var(--omni-typography-size-body-sm)",
-      "caption": "var(--omni-typography-size-caption)",
-      "label": "var(--omni-typography-size-label)"
+      "display-xl": "var(--tx-typography-size-display-xl)",
+      "display-lg": "var(--tx-typography-size-display-lg)",
+      "heading-xl": "var(--tx-typography-size-heading-xl)",
+      "heading-lg": "var(--tx-typography-size-heading-lg)",
+      "heading-md": "var(--tx-typography-size-heading-md)",
+      "body-lg": "var(--tx-typography-size-body-lg)",
+      "body-md": "var(--tx-typography-size-body-md)",
+      "body-sm": "var(--tx-typography-size-body-sm)",
+      "caption": "var(--tx-typography-size-caption)",
+      "label": "var(--tx-typography-size-label)"
     },
     "weight": {
-      "regular": "var(--omni-typography-weight-regular)",
-      "medium": "var(--omni-typography-weight-medium)",
-      "semibold": "var(--omni-typography-weight-semibold)",
-      "bold": "var(--omni-typography-weight-bold)"
+      "regular": "var(--tx-typography-weight-regular)",
+      "medium": "var(--tx-typography-weight-medium)",
+      "semibold": "var(--tx-typography-weight-semibold)",
+      "bold": "var(--tx-typography-weight-bold)"
     },
     "leading": {
-      "tight": "var(--omni-typography-leading-tight)",
-      "normal": "var(--omni-typography-leading-normal)",
-      "relaxed": "var(--omni-typography-leading-relaxed)"
+      "tight": "var(--tx-typography-leading-tight)",
+      "normal": "var(--tx-typography-leading-normal)",
+      "relaxed": "var(--tx-typography-leading-relaxed)"
     }
   },
   "space": {
-    "1": "var(--omni-space-1)",
-    "2": "var(--omni-space-2)",
-    "3": "var(--omni-space-3)",
-    "4": "var(--omni-space-4)",
-    "5": "var(--omni-space-5)",
-    "6": "var(--omni-space-6)",
-    "8": "var(--omni-space-8)",
-    "0-5": "var(--omni-space-0-5)",
-    "1-5": "var(--omni-space-1-5)"
+    "1": "var(--tx-space-1)",
+    "2": "var(--tx-space-2)",
+    "3": "var(--tx-space-3)",
+    "4": "var(--tx-space-4)",
+    "5": "var(--tx-space-5)",
+    "6": "var(--tx-space-6)",
+    "8": "var(--tx-space-8)",
+    "0-5": "var(--tx-space-0-5)",
+    "1-5": "var(--tx-space-1-5)"
   },
   "radius": {
-    "xs": "var(--omni-radius-xs)",
-    "sm": "var(--omni-radius-sm)",
-    "md": "var(--omni-radius-md)",
-    "lg": "var(--omni-radius-lg)",
-    "xl": "var(--omni-radius-xl)",
-    "2xl": "var(--omni-radius-2xl)",
-    "pill": "var(--omni-radius-pill)"
+    "xs": "var(--tx-radius-xs)",
+    "sm": "var(--tx-radius-sm)",
+    "md": "var(--tx-radius-md)",
+    "lg": "var(--tx-radius-lg)",
+    "xl": "var(--tx-radius-xl)",
+    "2xl": "var(--tx-radius-2xl)",
+    "pill": "var(--tx-radius-pill)"
   },
   "shadow": {
-    "card": "var(--omni-shadow-card)",
-    "raised": "var(--omni-shadow-raised)",
-    "overlay": "var(--omni-shadow-overlay)"
+    "card": "var(--tx-shadow-card)",
+    "raised": "var(--tx-shadow-raised)",
+    "overlay": "var(--tx-shadow-overlay)"
   },
   "border-width": {
-    "hairline": "var(--omni-border-width-hairline)"
+    "hairline": "var(--tx-border-width-hairline)"
   },
   "motion": {
     "duration": {
-      "fast": "var(--omni-motion-duration-fast)",
-      "normal": "var(--omni-motion-duration-normal)",
-      "slow": "var(--omni-motion-duration-slow)"
+      "fast": "var(--tx-motion-duration-fast)",
+      "normal": "var(--tx-motion-duration-normal)",
+      "slow": "var(--tx-motion-duration-slow)"
     },
     "easing": {
-      "standard": "var(--omni-motion-easing-standard)"
+      "standard": "var(--tx-motion-easing-standard)"
     }
   },
   "z-index": {
-    "dropdown": "var(--omni-z-index-dropdown)",
-    "sticky": "var(--omni-z-index-sticky)",
-    "drawer": "var(--omni-z-index-drawer)",
-    "modal": "var(--omni-z-index-modal)",
-    "toast": "var(--omni-z-index-toast)"
+    "dropdown": "var(--tx-z-index-dropdown)",
+    "sticky": "var(--tx-z-index-sticky)",
+    "drawer": "var(--tx-z-index-drawer)",
+    "modal": "var(--tx-z-index-modal)",
+    "toast": "var(--tx-z-index-toast)"
   },
   "breakpoint": {
-    "mobile": "var(--omni-breakpoint-mobile)",
-    "tablet": "var(--omni-breakpoint-tablet)",
-    "desktop": "var(--omni-breakpoint-desktop)"
+    "mobile": "var(--tx-breakpoint-mobile)",
+    "tablet": "var(--tx-breakpoint-tablet)",
+    "desktop": "var(--tx-breakpoint-desktop)"
   }
 } as const;
 export const rawTokens = {

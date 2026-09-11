@@ -1,11 +1,21 @@
+import { useEffect, useRef } from 'react';
 import ReactECharts from 'echarts-for-react';
 import { rawTokens as tokens } from '@omniappsuiux/design-tokens';
+
+// Charts measure their container before the webfonts finish loading and reflow the page; one resize once fonts settle fixes it.
+function useResizeOnFontsReady(chartRef: React.RefObject<ReactECharts | null>) {
+  useEffect(() => {
+    document.fonts?.ready.then(() => chartRef.current?.getEchartsInstance().resize()); // document.fonts is undefined in jsdom
+  }, [chartRef]);
+}
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
 const REVENUE = [1_650_000, 2_050_000, 2_400_000, 3_245_000, 2_900_000, 3_050_000];
 const HIGHLIGHT_INDEX = 3; // April — this month's figure, the one the card headlines.
 
 export function RevenueTrendChart() {
+  const chartRef = useRef<ReactECharts>(null);
+  useResizeOnFontsReady(chartRef);
   const option = {
     grid: { left: 40, right: 12, top: 36, bottom: 24 },
     tooltip: {
@@ -45,7 +55,7 @@ export function RevenueTrendChart() {
       },
     ],
   };
-  return <ReactECharts option={option} style={{ height: 220 }} notMerge />;
+  return <ReactECharts ref={chartRef} option={option} style={{ height: 220 }} notMerge />;
 }
 
 const ORDER_DISTRIBUTION = [
@@ -58,6 +68,8 @@ const ORDER_DISTRIBUTION = [
 const TOTAL_ORDERS = 128;
 
 export function OrderDistributionChart() {
+  const chartRef = useRef<ReactECharts>(null);
+  useResizeOnFontsReady(chartRef);
   const option = {
     tooltip: {
       trigger: 'item',
@@ -83,7 +95,7 @@ export function OrderDistributionChart() {
   };
   return (
     <div style={{ position: 'relative' }}>
-      <ReactECharts option={option} style={{ height: 160 }} notMerge />
+      <ReactECharts ref={chartRef} option={option} style={{ height: 160 }} notMerge />
       <div
         style={{
           position: 'absolute',
@@ -95,8 +107,8 @@ export function OrderDistributionChart() {
           pointerEvents: 'none',
         }}
       >
-        <span style={{ fontSize: 20, fontWeight: 700, color: 'var(--omni-color-text-primary)' }}>{TOTAL_ORDERS}</span>
-        <span style={{ fontSize: 11, color: 'var(--omni-color-text-tertiary)' }}>Orders</span>
+        <span style={{ fontSize: 20, fontWeight: 700, color: 'var(--tx-color-text-primary)' }}>{TOTAL_ORDERS}</span>
+        <span style={{ fontSize: 11, color: 'var(--tx-color-text-tertiary)' }}>Orders</span>
       </div>
     </div>
   );

@@ -8,8 +8,8 @@
 
 body {
   margin: 0;
-  font-family: var(--omni-typography-font-body);
-  background: var(--omni-color-surface-page);
-  color: var(--omni-color-text-primary);
+  font-family: var(--tx-typography-font-body);
+  background: var(--tx-color-surface-page);
+  color: var(--tx-color-text-primary);
   font-variant-numeric: tabular-nums;
 }
