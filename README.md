@@ -1,109 +1,92 @@
-# New Nx Repository
+# OmniApps — AI-Native Enterprise UI
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+An original design system and frontend prototype for a modern, AI-native ERP —
+not a reskin of Carbon, Fluent or Material. Open source (MIT). Built to
+eventually replace [`@omniapps/ui`](https://github.com/rupivbluegreen/omniApps)
+in the real Cachet ERP product, so it's designed against that product's real
+constraints (i18n, density, browser parity) from the start, not as a throwaway
+mockup.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+The demo domain is a Turkish textile/garment/fabric ERP — real module names,
+real customer brands (LC Waikiki, Koton, DeFacto), real Turkish business
+concepts (RFQ, production runs, shipment tracking) — because a design system
+proven on dense, specific, real content is trustworthy in a way one proven on
+placeholder text isn't. English is the base UI language throughout, structured
+so a translation layer (next-intl, matching the OmniApps app) can sit on top
+later rather than being baked in as hardcoded Turkish.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/docs/technologies/typescript/introduction?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## Status
 
-🚀 If you haven't connected to Nx Cloud yet, [complete your setup here](https://cloud.nx.app/get-started). Get faster builds with remote caching, distributed task execution, and self-healing CI. [See how your workspace can benefit](#nx-cloud).
+**Phase 1 of the plan, plus one real screen.** The workspace, the token
+pipeline, a first slice of the component library, and a live, working Home
+dashboard are built and verified — not wireframed. Everything past that
+(Orders, Production, Inventory, Finance, CRM screens; the Angular mirror;
+Storybook; e2e coverage) is not started yet. See [`docs/reference/`](docs/reference)
+for the original visual reference this was built against.
 
-## Generate a library
+## What it looks like
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
+Calm, editorial, "modern classic" — warm off-white surfaces, large rounded
+cards, soft low-contrast shadows, generous whitespace. A muted multi-color
+palette carries meaning rather than decoration: sage green as the one brand
+accent, dusty blue for informational state, soft apricot for warnings, a
+restrained lilac reserved only for AI — the interface stays AI-native without
+being AI-dominated. `DM Serif Display` for headings paired with `Inter` for
+UI text; tabular figures everywhere a number needs to line up with another.
+
+## Architecture
+
+```
+@omniappsuiux/design-tokens        one canonical tokens.json
+        │                          → generated CSS custom properties (theme-aware, for inline styles)
+        │                          → generated TS `tokens` (var() references) and `rawTokens` (literal
+        │                            values — canvas/chart fills silently ignore an unresolved var())
+        ↓
+@omniappsuiux/ui-react              Card/Stack/Inline, Button, StatusBadge/MetricDelta,
+                                     KPICard, AIInsightCard, AppShell — Radix underneath
+                                     where interaction correctness matters, nothing here today needs it yet
+        ↓
+apps/react-erp                      the ERP shell and screens, built from the above
 ```
 
-## Run tasks
+Two packages, an Nx workspace (pnpm), matching the `apps/*` + `libs/*` shape
+the OmniApps monorepo already uses — the point is that dropping this in later
+is close to a directory copy, not a rewrite.
 
-To build the library use:
+- **React**: Vite, React 19, React Router, TanStack (Table/Query) once a data
+  screen needs them, ECharts for charts (wrapped, never used raw in a screen),
+  Lucide for icons.
+- **Angular**: not started yet. Will mirror the React app screen-for-screen
+  against the same `design-tokens` package once it begins.
+- No UI framework underneath (no Material, no Ant, no Bootstrap, no Tailwind)
+  — this system owns its own visual language, the same discipline
+  `@omniapps/ui` already holds in the main product (`no-raw-color` /
+  `no-physical-css`: every color and spacing value comes from a token).
 
-```sh
-npx nx run pkg1:build
+## Running it
+
+```bash
+pnpm install
+npx nx run react-erp:dev        # dashboard on http://localhost:4200 (or next free port)
+npx nx run react-erp:test       # unit tests
+npx nx run-many -t typecheck --all
 ```
 
-To run any task with Nx use:
+To change a token: edit `libs/design-tokens/src/tokens.json`, then
+`pnpm --filter @omniappsuiux/design-tokens generate` to regenerate the CSS
+and TS output every consumer reads.
 
-```sh
-npx nx run <project-name>:<target>
-```
+## Two real bugs worth knowing about if you touch charts
 
-These targets are either [inferred automatically](https://nx.dev/docs/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+- **Use `rawTokens`, not `tokens`, for anything that isn't an inline React
+  style** — a `<canvas>` fill color silently ignores an unresolved
+  `var(--...)` string rather than erroring, which is exactly what
+  `tokens` (correctly) contains for CSS use.
+- **`echarts-for-react@3` doesn't survive React 19 StrictMode's
+  double-invoke** — it disposes the real chart on the second mount, leaving a
+  correctly-sized but blank canvas. StrictMode is off in `apps/react-erp` for
+  now; noted inline in `main.tsx`.
 
-[More about running tasks in the docs &raquo;](https://nx.dev/docs/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## License
 
-## Versioning and releasing
-
-To version and release the library use
-
-```
-npx nx release
-```
-
-Pass `--dry-run` to see what would happen without actually releasing the library.
-
-[Learn more about Nx release &raquo;](https://nx.dev/docs/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
-```
-
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
-
-```sh
-npx nx sync:check
-```
-
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
-
-## Nx Cloud
-
-Nx Cloud ensures a [fast and scalable CI](https://nx.dev/nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
-
-- [Remote caching](https://nx.dev/docs/features/ci-features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/docs/features/ci-features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/docs/features/ci-features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/docs/features/ci-features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-### Set up CI (non-Github Actions CI)
-
-**Note:** This is only required if your CI provider is not GitHub Actions.
-
-Use the following command to configure a CI workflow for your workspace:
-
-```sh
-npx nx g ci-workflow
-```
-
-[Learn more about Nx on CI](https://nx.dev/docs/features/ci-features?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/docs/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## 🔗 Learn More
-
-- [Nx Documentation](https://nx.dev/docs)
-- [Crafting Your Workspace Tutorial](https://nx.dev/docs/getting-started/tutorials/crafting-your-workspace)
-- [Module Boundaries](https://nx.dev/docs/features/enforce-module-boundaries)
-- [Releasing Packages](https://nx.dev/docs/features/manage-releases)
-- [Nx Plugins](https://nx.dev/docs/concepts/nx-plugins)
-- [Nx Cloud](https://nx.dev/nx-cloud)
-
-## 💬 Community
-
-Join the Nx community:
-
-- [Discord](https://go.nx.dev/community)
-- [X (Twitter)](https://twitter.com/nxdevtools)
-- [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [YouTube](https://www.youtube.com/@nxdevtools)
-- [Blog](https://nx.dev/blog)
+MIT.
