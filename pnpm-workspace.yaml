@@ -5,3 +5,6 @@ allowBuilds:
   '@swc/core': true
   esbuild: true
   nx: true
+overrides:
+  # GHSA-7w5x-hrqm-74c2 (high): DoS via malformed TOML, pulled in transitively by nx.
+  smol-toml: ^1.7.1

@@ -1,5 +1,5 @@
 {
-  "name": "textime-erp-uiux",
+  "name": "omniappsuiux",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {},
@@ -54,7 +54,7 @@
     "vite": "^8.0.0",
     "vitest": "~4.1.0"
   },
-  "description": "Textime ERP — an AI-native, open-source (MIT) design system and full frontend prototype for Turkish textile/garment/fabric ERP, in React and Angular.",
+  "description": "OmniApps' AI-native enterprise design system and full frontend prototype (open-source, MIT) for Turkish textile/garment/fabric ERP, in React and Angular.",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
