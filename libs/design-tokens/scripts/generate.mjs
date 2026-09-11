@@ -48,4 +48,4 @@ mkdirSync(join(root, '../src/generated'), { recursive: true });
 writeFileSync(join(root, '../src/generated/tokens.css'), css);
 writeFileSync(join(root, '../src/generated/tokens.ts'), ts);
 
-console.log(`Generated ${cssLines.length} tokens -> src/generated/tokens.css, src/generated/tokens.ts`);
+console.warn(`Generated ${cssLines.length} tokens -> src/generated/tokens.css, src/generated/tokens.ts`);
