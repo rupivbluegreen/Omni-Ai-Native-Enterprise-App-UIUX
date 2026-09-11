@@ -1,0 +1,33 @@
+.omni-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tx-space-0-5);
+}
+
+.omni-field-label {
+  font-size: var(--tx-typography-size-body-sm);
+  font-weight: var(--tx-typography-weight-medium);
+  color: var(--tx-color-text-primary);
+}
+
+.omni-field-hint {
+  font-size: var(--tx-typography-size-caption);
+  color: var(--tx-color-text-tertiary);
+}
+
+.omni-field-error {
+  font-size: var(--tx-typography-size-caption);
+  color: var(--tx-color-status-danger);
+}
+
+/* Where there is no Field around it — a number box inside a dense grid cell. */
+.omni-field-error[data-block] {
+  display: block;
+  white-space: normal;
+  margin-block-start: var(--tx-space-0-5);
+}
+
+.omni-required {
+  color: var(--tx-color-status-danger);
+  margin-inline-start: var(--tx-space-0-5);
+}

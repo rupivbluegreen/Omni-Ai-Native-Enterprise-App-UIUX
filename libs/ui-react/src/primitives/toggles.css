@@ -1,0 +1,54 @@
+.omni-checkbox,
+.omni-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 18px;
+  block-size: 18px;
+  flex: none;
+  background: var(--tx-color-surface-card);
+  border: var(--tx-border-width-hairline) solid var(--tx-color-border-default);
+  border-radius: var(--tx-radius-xs);
+  cursor: pointer;
+}
+.omni-radio { border-radius: 50%; }
+
+.omni-checkbox[data-state='checked'],
+.omni-checkbox[data-state='indeterminate'],
+.omni-radio[data-state='checked'] {
+  background: var(--tx-color-brand-700);
+  border-color: var(--tx-color-brand-700);
+  color: var(--tx-color-text-on-brand);
+}
+
+.omni-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tx-space-1);
+  font-size: var(--tx-typography-size-body-md);
+  color: var(--tx-color-text-primary);
+  cursor: pointer;
+}
+
+.omni-switch {
+  inline-size: 34px;
+  block-size: 20px;
+  flex: none;
+  padding: 2px;
+  background: var(--tx-color-border-default);
+  border: none;
+  border-radius: var(--tx-radius-pill);
+  cursor: pointer;
+}
+.omni-switch[data-state='checked'] { background: var(--tx-color-brand-700); }
+
+.omni-switch-thumb {
+  display: block;
+  inline-size: 16px;
+  block-size: 16px;
+  background: var(--tx-color-surface-elevated);
+  border-radius: 50%;
+  transition: transform var(--tx-motion-duration-fast) var(--tx-motion-easing-standard);
+}
+.omni-switch[data-state='checked'] .omni-switch-thumb { transform: translateX(14px); }
+[dir='rtl'] .omni-switch[data-state='checked'] .omni-switch-thumb { transform: translateX(-14px); }

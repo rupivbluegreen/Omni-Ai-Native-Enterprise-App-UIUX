@@ -5,6 +5,10 @@
 @import './patterns/kpi-card.css';
 @import './patterns/ai-insight-card.css';
 @import './patterns/app-shell.css';
+@import './primitives/field.css';
+@import './primitives/input.css';
+@import './primitives/select.css';
+@import './primitives/toggles.css';
 
 body {
   margin: 0;
