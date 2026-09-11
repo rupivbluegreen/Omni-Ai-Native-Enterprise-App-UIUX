@@ -34,7 +34,7 @@ const FOOTER_NAV: SidebarItemData[] = [{ key: 'settings', label: 'Settings', ico
 const UPCOMING = [
   { icon: <CalendarCheck size={16} />, label: 'Production meeting', meta: 'Today 10:00' },
   { icon: <Truck size={16} />, label: 'ORD-2024-031 shipment', meta: 'Tomorrow' },
-  { icon: <FileText size={16} />, label: 'LC Waikiki revision request', meta: 'Tomorrow' },
+  { icon: <FileText size={16} />, label: 'Anatolia Home revision request', meta: 'Tomorrow' },
   { icon: <ReceiptText size={16} />, label: 'Monthly finance close', meta: 'Apr 30' },
 ];
 
