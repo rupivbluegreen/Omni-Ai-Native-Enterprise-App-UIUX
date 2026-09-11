@@ -17,7 +17,7 @@
 
 .omni-kpi-label { font-size: var(--tx-typography-size-body-sm); color: var(--tx-color-text-secondary); font-weight: var(--tx-typography-weight-medium); }
 .omni-kpi-value {
-  font-family: var(--tx-typography-font-body);
+  font-family: inherit;
   font-size: var(--tx-typography-size-heading-xl);
   font-weight: var(--tx-typography-weight-bold);
   color: var(--tx-color-text-primary);

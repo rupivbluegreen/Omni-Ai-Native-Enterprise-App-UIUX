@@ -137,7 +137,7 @@ export function Dashboard() {
               <br />a stronger future.
             </p>
             <a href="#" className="omni-dashboard-link omni-dashboard-editorial-link">
-              View the sustainability report →
+              View the sustainability report <span className="tx-directional-icon" aria-hidden="true">→</span>
             </a>
           </div>
           <Card padding="lg" className="omni-dashboard-quote">

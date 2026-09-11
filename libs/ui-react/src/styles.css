@@ -13,3 +13,17 @@ body {
   color: var(--tx-color-text-primary);
   font-variant-numeric: tabular-nums;
 }
+
+/* Inter has no Arabic glyphs, so Arabic text switches family rather than falling back to tofu or a mismatched system font. */
+:lang(ar),
+[dir='rtl'] {
+  font-family: var(--tx-typography-font-arabic);
+}
+
+/* Glyphs that literally encode reading direction (arrows, chevrons into content) mirror under RTL; icons like search or bell never get this class. */
+.tx-directional-icon {
+  display: inline-block;
+}
+[dir='rtl'] .tx-directional-icon {
+  transform: scaleX(-1);
+}

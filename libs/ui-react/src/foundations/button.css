@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--tx-space-1);
-  font-family: var(--tx-typography-font-body);
+  font-family: inherit;
   font-weight: var(--tx-typography-weight-medium);
   border: var(--tx-border-width-hairline) solid transparent;
   border-radius: var(--tx-radius-xs);

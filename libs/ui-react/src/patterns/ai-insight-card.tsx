@@ -21,7 +21,7 @@ export function AIInsightCard({ title, children, action }: AIInsightCardProps) {
         <p className="omni-ai-insight-text">{children}</p>
         {action ? (
           <Button variant="primary" size="sm" onClick={action.onClick}>
-            {action.label} →
+            {action.label} <span className="tx-directional-icon" aria-hidden="true">→</span>
           </Button>
         ) : null}
       </div>

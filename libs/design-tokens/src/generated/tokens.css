@@ -37,6 +37,7 @@
   --tx-color-chart-6: #C87868;
   --tx-typography-font-display: 'DM Serif Display', 'Georgia', serif;
   --tx-typography-font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --tx-typography-font-arabic: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
   --tx-typography-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --tx-typography-size-display-xl: 3rem;
   --tx-typography-size-display-lg: 2.25rem;

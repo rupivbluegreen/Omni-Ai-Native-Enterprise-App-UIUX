@@ -62,6 +62,7 @@ export const tokens = {
     "font": {
       "display": "var(--tx-typography-font-display)",
       "body": "var(--tx-typography-font-body)",
+      "arabic": "var(--tx-typography-font-arabic)",
       "mono": "var(--tx-typography-font-mono)"
     },
     "size": {
@@ -201,6 +202,7 @@ export const rawTokens = {
     "font": {
       "display": "'DM Serif Display', 'Georgia', serif",
       "body": "'Inter', 'Helvetica Neue', sans-serif",
+      "arabic": "'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif",
       "mono": "'IBM Plex Mono', ui-monospace, monospace"
     },
     "size": {

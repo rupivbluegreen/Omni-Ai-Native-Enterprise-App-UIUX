@@ -70,7 +70,7 @@
 .omni-shell-topbar-actions { margin-inline-start: auto; display: flex; align-items: center; gap: var(--tx-space-2); }
 .omni-shell-bell { position: relative; display: inline-flex; border: none; background: transparent; color: var(--tx-color-text-secondary); cursor: pointer; padding: var(--tx-space-1); border-radius: var(--tx-radius-xs); }
 .omni-shell-bell:hover { background: var(--tx-color-surface-subtle); }
-.omni-shell-bell-dot { position: absolute; top: 4px; right: 4px; inline-size: 7px; block-size: 7px; border-radius: 50%; background: var(--tx-color-status-danger); }
+.omni-shell-bell-dot { position: absolute; top: 4px; inset-inline-end: 4px; inline-size: 7px; block-size: 7px; border-radius: 50%; background: var(--tx-color-status-danger); }
 .omni-shell-user { display: flex; align-items: center; gap: var(--tx-space-1); cursor: pointer; }
 .omni-shell-avatar {
   display: inline-flex;
