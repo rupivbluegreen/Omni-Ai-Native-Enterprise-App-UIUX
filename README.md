@@ -3,14 +3,13 @@
 An original design system and frontend prototype for a modern, AI-native ERP —
 not a reskin of Carbon, Fluent or Material. Open source (MIT). Built to
 eventually replace [`@omniapps/ui`](https://github.com/rupivbluegreen/omniApps)
-in the real Cachet ERP product, so it's designed against that product's real
-constraints (i18n, density, browser parity) from the start, not as a throwaway
-mockup.
+in production, so it's designed against that product's real constraints
+(i18n, density, browser parity) from the start, not as a throwaway mockup.
 
 The demo domain is a Turkish textile/garment/fabric ERP — real module names,
-real customer brands (LC Waikiki, Koton, DeFacto), real Turkish business
-concepts (RFQ, production runs, shipment tracking) — because a design system
-proven on dense, specific, real content is trustworthy in a way one proven on
+realistic customer and demo data, real Turkish business concepts (RFQ,
+production runs, shipment tracking) — because a design system proven on
+dense, specific, real content is trustworthy in a way one proven on
 placeholder text isn't. English is the base UI language throughout, structured
 so a translation layer (next-intl, matching the OmniApps app) can sit on top
 later rather than being baked in as hardcoded Turkish.
